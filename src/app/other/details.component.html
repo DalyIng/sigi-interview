@@ -1,0 +1,29 @@
+<div class="p-4">
+  <div class="container">
+    <div *ngIf="other" class="row">
+      <div class="col-md-6 offset-md-3  text-center">
+        <div class="card" style="width: 100%">
+          <img
+            class="card-img-top"
+            src="{{ other.avatar }}"
+            alt="{{ other.first_name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ other.first_name }} {{ other.last_name }}
+            </h5>
+            <p class="card-text">
+              {{ other.email }}
+            </p>
+            <a routerLink="/other" class="btn btn-sm btn-primary mr-1"
+              >Go back</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!other">
+      <span class="spinner-border spinner-border-lg align-center"></span>
+    </div>
+  </div>
+</div>

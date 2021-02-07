@@ -1,0 +1,28 @@
+<div class="p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let other of others">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{{ other.avatar }}"
+            alt="{{ other.first_name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ other.first_name }} {{ other.last_name }}
+            </h5>
+            <p class="card-text">
+              {{ other.email }}
+            </p>
+            <a
+              routerLink="details/{{ other.id }}"
+              class="btn btn-sm btn-primary mr-1"
+              >See details</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
